@@ -76,6 +76,19 @@ io.on('connection', (sock) => {
     io.sockets.in('room1').emit('updatedMovement', socket.square);
   });
 
+    // Current collision attempt
+    // box collision check between two rectangles
+    // of a set width/height
+//  const checkCollisions = (rect1, rect2, width, height) => {
+//    if (rect1.x < rect2.x + width &&
+//            rect1.x + width > rect2.x &&
+//            rect1.y < rect2.y + height &&
+//            height + rect1.y > rect2.y) {
+//      return true; // is colliding
+//    }
+//    return false; // is not colliding
+//  };
+
   // when a user disconnects, we want to make sure we let everyone know
   // and ask them to remove the object
   socket.on('disconnect', () => {
